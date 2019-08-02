@@ -3,9 +3,14 @@ class UserDetail extends React.Component {
     state = {  }
     render() { 
         return ( 
-
-            <div>
-            {this.props.name}</div>
+            <tr>
+                <td>{this.props.id}</td>
+                <td>{this.props.name}</td>
+                <td>{this.props.username}</td>
+                <td>{this.props.zipcode}</td>
+                <td>{this.props.lat}</td> 
+            </tr>
+        
          );
     }
 }

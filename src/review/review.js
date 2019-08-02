@@ -12,8 +12,7 @@ class ReviewComponent extends React.Component {
                 <h4>{this.props.children}</h4>
                 <ReviewTitle titlecolor={this.props.titlecolor}></ReviewTitle>
                 <ReviewDescription></ReviewDescription>
-                <ReviewActions un={this.props.username}></ReviewActions>
-                <ReviewActions like={this.props.like} unlike={this.props.unlike}></ReviewActions>
+                <ReviewActions like={this.props.like} unlike={this.props.unlike} un={this.props.username}></ReviewActions>
                 
                 
             </div>

@@ -9,17 +9,38 @@ class ReamoteData extends React.Component {
         }
     }
     componentWillMount(){
-        this.RemoteData();
+        this.getRemoteData();
+        //this.getData();
     }
     getRemoteData(){
-        axios.get("https.ge").then((Response)=>{console.log(response.data)});
-        this.setState({users:response.data});
+        axios.get("http://localhost:3000/friends").then((response)=>{
+            console.log(response.data);
+        this.setState({users: response.data});
         console.log(this.state.users);
+    });
+}
+    successFuntion = function(response){
+        console.log(response.data);
     }
+    errorFunction = function(response){
+        console.log(response.data);
+    }
+getData = function(){
+    axios.get("https://jsonplaceholder.typicode.com/users").then(this.successFuntion,this.errorFunction);
+}
+
+    
 
     displayallusers = function(){
         return this.state.users.map((user)=>{
-            return <UserDetail name ={user.name}
+            return <UserDetail 
+            key ={user.id}
+            id={user.id}
+            name ={user.name}
+            username ={user.username}
+            zipcode={user.address.zipcode}
+            lat={user.address.geo.lat}
+            lng={user.address.geo.lng}
             un ={user.username}></UserDetail>
         })
         
@@ -27,9 +48,21 @@ class ReamoteData extends React.Component {
     state = {  }
     render() { 
         return ( 
-            <div>
-                {this.displayallusers()}
-            </div>
+            <span>
+            <table border ="1" >
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>name</th>
+                            <th>username</th>
+                            <th>zip</th>
+                            <th>Lat</th>
+                        </tr>
+                    </thead>
+                    <tbody>{this.displayallusers()}</tbody>
+                    
+                </table>
+                </span>
          );
     }
 }

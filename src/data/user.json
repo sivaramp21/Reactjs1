@@ -1,0 +1,40 @@
+{
+    "products":[
+        {
+            "id" : 1,
+            "name" : "note 10",
+            "categoryid" : 1,
+            "price" :5000
+        },
+        {
+            "id" : 2,
+            "name" : "mi",
+            "categoryid" : 2,
+            "price" :4000
+
+        },
+        {
+            "id" : 3,
+            "name" : "samsung",
+            "categoryid" : 3,
+            "price" :6000
+
+        },
+        {
+            "id" : 4,
+            "name" : "huwei",
+            "categoryid" : 4,
+            "price" :7000    
+        }
+    ],
+    "category":[
+        {
+            "id" :1,
+            "name" : "mobile"
+        },
+        {
+            "id" :2,
+            "name" : "mobile"
+        }
+    ]
+}

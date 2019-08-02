@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import FirstComponent from './firstcomponent';
 import ReviewComponent from './review/review';
 import Lifecycle from './lifecycle/lifecycle';
+import ReamoteData from './remote/remotedata';
+import UserVote from './forms/vote';
 
 
 var location = document.getElementById("container");
@@ -21,6 +23,9 @@ ReactDOM.render(
 alert("2nd rendor start");
 
 ReactDOM.render(<Lifecycle></Lifecycle>,lifelocation);
+
+ReactDOM.render(<span><ReamoteData></ReamoteData><UserVote></UserVote></span>,document.getElementById("container2"));
+
 
 
 
